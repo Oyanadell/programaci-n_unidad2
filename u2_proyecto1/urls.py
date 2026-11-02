@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pedidos_app.views import crear_cliente, listar_clientes, listar_cliente, eliminar_cliente, modificar_cliente
+from pedidos_app.views import crear_cliente, listar_clientes, listar_cliente, eliminar_cliente, modificar_cliente, crear_categoria, listar_categorias, listar_categoria, modificar_categoria, eliminar_categoria
 
 
 urlpatterns = [
@@ -26,4 +26,9 @@ urlpatterns = [
     path('cliente/<int:id>', listar_cliente),
     path('cliente/eliminar/<int:id>', eliminar_cliente),
     path('cliente/modificar/<int:id>', modificar_cliente),
+    path('categoria/agregar', crear_categoria),
+    path('categorias', listar_categorias),
+    path('categoria/<int:id>', listar_categoria),
+    path('categoria/modificar/<int:id>', modificar_categoria),
+    path('categoria/eliminar/<int:id>', eliminar_categoria),
 ]
